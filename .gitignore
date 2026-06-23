@@ -54,3 +54,6 @@ coverage/
 .nyc_output/
 .cache/
 Thumbs.db
+
+# 개인 스킬 심링크 등 — template 오염 방지
+/.claude/
