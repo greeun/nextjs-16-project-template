@@ -1,0 +1,156 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/*
+  Tailwind 4 는 node_modules 를 스캔 제외한다. @withwiz/ui 컴포넌트가 쓰는
+  토큰 유틸 클래스(bg-accent, border-input, bg-secondary, hover:bg-accent 등)를
+  생성하려면 패키지 빌드 산출물을 @source 로 명시 포함해야 한다.
+  (미포함 시 ghost/outline 버튼의 배경·테두리가 안 그려져 다크에서 안 보임)
+*/
+@source "../../node_modules/@withwiz/ui/dist";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+  디자인 시스템 토큰 (락)
+  - 액센트: indigo-600 (#4f46e5) 단일
+  - 중립: zinc scale. 순수 #000/#fff 금지
+  - 반경: 카드/인풋/버튼 rounded-lg(10px), pill/vote/badge rounded-full
+*/
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+:root {
+  --radius: 0.625rem; /* 10px */
+
+  /* light: zinc-50 배경, zinc-950 텍스트 (순수 흑백 금지) */
+  --background: oklch(0.985 0 0); /* zinc-50 */
+  --foreground: oklch(0.21 0.006 285.885); /* zinc-900 */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.21 0.006 285.885);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.21 0.006 285.885);
+
+  /* indigo-600 단일 액센트 */
+  --primary: oklch(0.511 0.262 276.966); /* indigo-600 #4f46e5 */
+  --primary-foreground: oklch(0.985 0 0);
+
+  --secondary: oklch(0.967 0.001 286.375); /* zinc-100 */
+  --secondary-foreground: oklch(0.21 0.006 285.885);
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: oklch(0.552 0.016 285.938); /* zinc-500 */
+  --accent: oklch(0.967 0.001 286.375);
+  --accent-foreground: oklch(0.21 0.006 285.885);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  --border: oklch(0.92 0.004 286.32); /* zinc-200 */
+  --input: oklch(0.92 0.004 286.32);
+  --ring: oklch(0.511 0.262 276.966); /* indigo ring */
+}
+
+.dark {
+  /* dark: zinc-950 배경, zinc-100 텍스트 */
+  --background: oklch(0.141 0.005 285.823); /* zinc-950 */
+  --foreground: oklch(0.967 0.001 286.375); /* zinc-100 */
+  --card: oklch(0.21 0.006 285.885); /* zinc-900 */
+  --card-foreground: oklch(0.967 0.001 286.375);
+  --popover: oklch(0.21 0.006 285.885);
+  --popover-foreground: oklch(0.967 0.001 286.375);
+
+  /* indigo 다크 변형(가독성 위해 약간 밝게) */
+  --primary: oklch(0.585 0.233 277.117); /* indigo-500ish */
+  --primary-foreground: oklch(0.985 0 0);
+
+  --secondary: oklch(0.274 0.006 286.033); /* zinc-800 */
+  --secondary-foreground: oklch(0.967 0.001 286.375);
+  --muted: oklch(0.274 0.006 286.033);
+  --muted-foreground: oklch(0.705 0.015 286.067); /* zinc-400 */
+  --accent: oklch(0.274 0.006 286.033);
+  --accent-foreground: oklch(0.967 0.001 286.375);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.585 0.233 277.117);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+  }
+}
+
+/* prefers-reduced-motion 존중: 모든 transition/animation 최소화 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*
+  인증 화면 라이트 격리.
+  @withwiz/auth-ui 는 light 전용(auth.css: color-scheme:light, 다크 셀렉터 없음)이라
+  다크 body 위에서 깨진다(흰 배경 매직링크 버튼이 --foreground=흰색 텍스트를 상속 → 안 보임).
+  인증 페이지를 .force-light 로 감싸 라이트 토큰을 강제한다 — 테마 토글과 무관하게 항상 라이트.
+*/
+.force-light {
+  color-scheme: light;
+  --background: oklch(0.985 0 0);
+  --foreground: oklch(0.21 0.006 285.885);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.21 0.006 285.885);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.21 0.006 285.885);
+  --primary: oklch(0.511 0.262 276.966);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.967 0.001 286.375);
+  --secondary-foreground: oklch(0.21 0.006 285.885);
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: oklch(0.552 0.016 285.938);
+  --accent: oklch(0.967 0.001 286.375);
+  --accent-foreground: oklch(0.21 0.006 285.885);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.92 0.004 286.32);
+  --input: oklch(0.92 0.004 286.32);
+  --ring: oklch(0.511 0.262 276.966);
+  background-color: var(--background);
+  color: var(--foreground);
+}

@@ -1,0 +1,10 @@
+{
+  "extensions": {
+    "skills": [
+      "nextjs-project-wizard"
+    ],
+    "commands": [],
+    "agents": [],
+    "plugins": []
+  }
+}

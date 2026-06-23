@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "nextjs-16-project-template",
+    "description": "withwiz toolkit · ui · auth-ui 기반 Next.js 16 보일러플레이트"
+  },
+  "nav": {
+    "home": "홈",
+    "login": "로그인",
+    "admin": "관리자",
+    "logout": "로그아웃"
+  },
+  "home": {
+    "title": "nextjs-16-project-template",
+    "subtitle": "Next.js 16 · React 19 · Prisma 7 · withwiz 통합 스타터",
+    "cta": "관리자로 이동",
+    "loginCta": "로그인"
+  },
+  "login": {
+    "title": "팀 로그인",
+    "subtitle": "이메일과 비밀번호로 로그인하세요"
+  },
+  "admin": {
+    "title": "관리자 대시보드",
+    "welcome": "{name}님, 환영합니다",
+    "logout": "로그아웃"
+  },
+  "common": {
+    "loading": "불러오는 중…",
+    "language": "언어"
+  }
+}
