@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "nextjs-project-wizard",
+    "title": "nextjs-16-project-template",
     "description": "withwiz toolkit · ui · auth-ui 기반 Next.js 16 보일러플레이트"
   },
   "nav": {
@@ -10,7 +10,7 @@
     "logout": "로그아웃"
   },
   "home": {
-    "title": "nextjs-project-wizard",
+    "title": "nextjs-16-project-template",
     "subtitle": "Next.js 16 · React 19 · Prisma 7 · withwiz 통합 스타터",
     "cta": "관리자로 이동",
     "loginCta": "로그인"
