@@ -9,7 +9,7 @@ function logStartupBanner() {
   const nodeVersion = globalThis.process?.version ?? "unknown";
 
   printStartupBanner({
-    title: "🚀 nextjs-16-project-template",
+    title: "🚀 nextjs-project-wizard",
     version: env.npm_package_version ?? "unknown",
     sections: [
       {

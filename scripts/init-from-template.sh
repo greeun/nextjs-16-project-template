@@ -35,11 +35,11 @@ FILES=(
   .env.example
 )
 
-echo "→ 치환: 포트 179xx → ${BLOCK}xx · 이름 nextjs-16-project-template → ${NAME} · DB nextjs_16_project_template → ${DB_NAME}"
+echo "→ 치환: 포트 179xx → ${BLOCK}xx · 이름 nextjs-project-wizard → ${NAME} · DB nextjs_project_wizard → ${DB_NAME}"
 for f in "${FILES[@]}"; do
   [[ -f "$f" ]] || continue
   # 179XX(뒤 2자리 유지) → BLOCKXX, DB명(snake), 프로젝트명(kebab) 순서로 치환
-  sed -i.bak -E "s/179([0-9]{2})/${BLOCK}\1/g; s/nextjs_16_project_template/${DB_NAME}/g; s/nextjs-16-project-template/${NAME}/g" "$f"
+  sed -i.bak -E "s/179([0-9]{2})/${BLOCK}\1/g; s/nextjs_project_wizard/${DB_NAME}/g; s/nextjs-project-wizard/${NAME}/g" "$f"
   rm -f "$f.bak"
 done
 

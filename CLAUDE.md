@@ -9,7 +9,7 @@
 
 ## 개요
 
-nextjs-16-project-template — withwiz 패키지(`@withwiz/toolkit` · `@withwiz/ui` · `@withwiz/auth-ui`) 기반
+nextjs-project-wizard — withwiz 패키지(`@withwiz/toolkit` · `@withwiz/ui` · `@withwiz/auth-ui`) 기반
 Next.js 16 보일러플레이트. toolkit 인증 전 기능(이메일/비번 로그인·회원가입·OAuth·비밀번호 재설정·
 이메일 인증·매직링크) + i18n(ko/en/ja) + Docker + Vitest/Playwright 가 통합돼 있다.
 
