@@ -1,0 +1,34 @@
+services:
+  db:
+    image: postgres:16
+    container_name: nextjs-16-project-template-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nextjs_16_project_template
+    ports:
+      - "17901:5432"
+    volumes:
+      - nextjs_16_project_template_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d nextjs_16_project_template"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # 테스트 전용 DB (포트 17906) — `docker compose --profile test up -d`
+  db-test:
+    image: postgres:16
+    container_name: nextjs-16-project-template-db-test
+    profiles: ["test"]
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nextjs_16_project_template_test
+    ports:
+      - "17906:5432"
+    tmpfs:
+      - /var/lib/postgresql/data
+
+volumes:
+  nextjs_16_project_template_pg:

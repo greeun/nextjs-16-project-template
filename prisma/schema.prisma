@@ -1,0 +1,69 @@
+// 빈 보일러플레이트 스키마.
+// withwiz/toolkit prisma auth-adapter 가 기대하는 표준 인증 테이블만 포함:
+//   User / Account / AccountToken(OAuth 분리 저장) / EmailToken(검증·재설정·매직링크)
+// 도메인 모델은 여기에 추가한다.
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  // Prisma 7 driver-adapter(@prisma/adapter-pg) 사용 — 런타임 url 은 src/lib/db.ts 에서 주입.
+  provider = "postgresql"
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String
+  passwordHash  String?
+  role          String    @default("MEMBER")
+  emailVerified DateTime?
+  image         String?
+  isActive      Boolean   @default(true)
+  lastLoginAt   DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  accounts Account[]
+}
+
+model Account {
+  id                String        @id @default(cuid())
+  userId            String
+  user              User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type              String
+  provider          String
+  providerAccountId String
+  createdAt         DateTime      @default(now())
+  token             AccountToken?
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model AccountToken {
+  id           String   @id @default(cuid())
+  accountId    String   @unique
+  account      Account  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  accessToken  String?
+  refreshToken String?
+  expiresAt    Int? // Unix epoch 초 (toolkit 어댑터가 초 단위로 저장)
+  tokenType    String?  @db.VarChar(20)
+  scope        String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([accountId])
+}
+
+model EmailToken {
+  id        String   @id @default(cuid())
+  email     String
+  token     String
+  type      String // EMAIL_VERIFICATION | PASSWORD_RESET | MAGIC_LINK
+  expires   DateTime
+  used      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([email, type])
+}
