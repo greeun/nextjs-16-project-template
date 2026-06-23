@@ -1,4 +1,4 @@
-# nextjs-project-wizard
+# nextjs-16-project-template
 
 withwiz 패키지(`@withwiz/toolkit` · `@withwiz/ui` · `@withwiz/auth-ui`) 기반 **Next.js 16 보일러플레이트**.
 
@@ -17,7 +17,7 @@ withwiz 패키지(`@withwiz/toolkit` · `@withwiz/ui` · `@withwiz/auth-ui`) 기
 git clone <새-repo-url> my-saas && cd my-saas
 
 # 방법 B — degit 으로 파일만(히스토리 없이) 가져오기
-npx degit <org>/nextjs-project-wizard my-saas && cd my-saas
+npx degit <org>/nextjs-16-project-template my-saas && cd my-saas
 ```
 
 그다음 **초기화 스크립트**로 프로젝트명·포트·DB명을 일괄 치환한다:
@@ -27,7 +27,7 @@ npx degit <org>/nextjs-project-wizard my-saas && cd my-saas
 #                               └이름     └포트블록(3자리) → 18000/18001/18005/18006/18030, DB my_saas
 ```
 
-스크립트가 하는 일: 이름(`nextjs-project-wizard`)·포트(`179xx`)·DB명(`nextjs_project_wizard`) 치환 + `.env.local` 생성(JWT_SECRET 랜덤). 이후 워크스페이스 `PORTS.md` 에 새 블록만 등록하면 끝.
+스크립트가 하는 일: 이름(`nextjs-16-project-template`)·포트(`179xx`)·DB명(`nextjs_16_project_template`) 치환 + `.env.local` 생성(JWT_SECRET 랜덤). 이후 워크스페이스 `PORTS.md` 에 새 블록만 등록하면 끝.
 
 ## 빠른 시작
 
