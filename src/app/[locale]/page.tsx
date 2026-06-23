@@ -14,7 +14,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   return (
     <div className="flex min-h-screen flex-col">
       <header className="border-border flex items-center justify-between border-b px-6 py-4">
-        <span className="font-semibold tracking-tight">nextjs-16-project-template</span>
+        <span className="font-semibold tracking-tight">nextjs-project-wizard</span>
         <div className="flex items-center gap-3">
           <LocaleSwitcher current={locale} />
           <ThemeToggle />

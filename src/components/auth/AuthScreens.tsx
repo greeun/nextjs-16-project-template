@@ -12,7 +12,7 @@ import type { Locale } from "@/i18n/config";
 // auth-ui UI 가 버튼을 그릴 수 있는 OAuth provider (toolkit 백엔드는 5종이지만 UI 는 3종)
 export type UiOAuthProvider = "google" | "github" | "kakao";
 
-const logo = <span className="text-lg font-semibold tracking-tight">nextjs-16-project-template</span>;
+const logo = <span className="text-lg font-semibold tracking-tight">nextjs-project-wizard</span>;
 const visual = { pattern: "triangle" as const, backgroundColor: "#f0f4ff", logo };
 
 /** auth-ui 는 light 전용 — 다크 토글과 무관하게 라이트 토큰으로 격리. */
