@@ -21,8 +21,8 @@ importers:
         specifier: ^0.9.0
         version: 0.9.0(next@16.2.9(@babel/core@7.29.7)(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(nodemailer@7.0.13)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@withwiz/ui':
-        specifier: ^0.1.0
-        version: 0.1.0(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(@withwiz/toolkit@0.9.0(next@16.2.9(@babel/core@7.29.7)(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(nodemailer@7.0.13)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(next@16.2.9(@babel/core@7.29.7)(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+        specifier: ^0.2.0
+        version: 0.2.0(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(@withwiz/toolkit@0.9.0(next@16.2.9(@babel/core@7.29.7)(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(nodemailer@7.0.13)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(next@16.2.9(@babel/core@7.29.7)(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       bcryptjs:
         specifier: ^3.0.2
         version: 3.0.3
@@ -1736,8 +1736,9 @@ packages:
       react-dom:
         optional: true
 
-  '@withwiz/ui@0.1.0':
-    resolution: {integrity: sha512-/hMoaypClY2ignXukiYdDca+lVNkQTT3axa+20gCDhwQlm3PrMXcnXnUuRgvOO0rFNoekxdTjhbAtyTWppaAmw==}
+  '@withwiz/ui@0.2.0':
+    resolution: {integrity: sha512-DvPk6S8Ks6nX13AJyQYLUK8Pr31fa1x6pyn5zmzNXxNS2jnRRg3cIGiXRBTleFlUDaPzGCdXzvHEx7wNGCpjEA==}
+    engines: {node: '>=20', pnpm: '>=10'}
     peerDependencies:
       '@withwiz/toolkit': '>=0.8.0'
       next: '>=15'
@@ -5217,7 +5218,7 @@ snapshots:
       react: 19.2.7
       react-dom: 19.2.7(react@19.2.7)
 
-  '@withwiz/ui@0.1.0(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(@withwiz/toolkit@0.9.0(next@16.2.9(@babel/core@7.29.7)(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(nodemailer@7.0.13)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(next@16.2.9(@babel/core@7.29.7)(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+  '@withwiz/ui@0.2.0(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(@withwiz/toolkit@0.9.0(next@16.2.9(@babel/core@7.29.7)(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(nodemailer@7.0.13)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(next@16.2.9(@babel/core@7.29.7)(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
     dependencies:
       '@radix-ui/react-select': 2.3.1(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       clsx: 2.1.1
