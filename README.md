@@ -10,14 +10,15 @@ withwiz 패키지(`@withwiz/toolkit` · `@withwiz/ui` · `@withwiz/auth-ui`) 기
 
 ## 템플릿으로 새 프로젝트 시작
 
-이 repo 는 **GitHub Template Repository** 다. 새 프로젝트는 아래 중 하나로 시작한다.
+이 repo 는 **private GitHub Template Repository** 다. 새 프로젝트는 아래 중 하나로 시작한다.
 
 ```bash
-# 방법 A — GitHub "Use this template" 로 새 repo 생성 후 clone
-git clone <새-repo-url> my-saas && cd my-saas
+# 방법 A — gh 로 파일만 가져오고 템플릿 히스토리는 끊는다 (private 이라 degit 은 인증 실패)
+gh repo clone greeun/nextjs-16-project-template my-saas -- --depth=1 \
+  && rm -rf my-saas/.git && cd my-saas
 
-# 방법 B — degit 으로 파일만(히스토리 없이) 가져오기
-npx degit <org>/nextjs-16-project-template my-saas && cd my-saas
+# 방법 B — GitHub "Use this template" 로 새 repo 생성 후 clone
+git clone <새-repo-url> my-saas && cd my-saas
 ```
 
 그다음 **초기화 스크립트**로 프로젝트명·포트·DB명을 일괄 치환한다:
@@ -27,16 +28,16 @@ npx degit <org>/nextjs-16-project-template my-saas && cd my-saas
 #                               └이름     └포트블록(3자리) → 18000/18001/18005/18006/18030, DB my_saas
 ```
 
-스크립트가 하는 일: 이름(`nextjs-16-project-template`)·포트(`179xx`)·DB명(`nextjs_16_project_template`) 치환 + `.env.local` 생성(JWT_SECRET 랜덤). 이후 워크스페이스 `PORTS.md` 에 새 블록만 등록하면 끝.
+스크립트가 하는 일: 이름(`nextjs-16-project-template`)·포트(`179xx`)·DB명(`nextjs_16_project_template`) 치환 + `.env.local` 생성(JWT_SECRET 랜덤) + 템플릿 흔적 제거 + git 히스토리 새로 시작. 이후 워크스페이스 `PORTS.md` 에 새 블록을 등록하고, `pnpm install` 뒤에 `pnpm add @withwiz/toolkit@latest @withwiz/ui@latest @withwiz/auth-ui@latest` 로 withwiz 를 npm 게시 최신 버전으로 올린다.
 
 ## 빠른 시작
 
 ```bash
-# 0) 의존성
-pnpm install
-
-# 1) 환경변수
+# 0) 환경변수 — 반드시 의존성 설치보다 먼저. postinstall(prisma generate)이 DATABASE_URL 을 읽는다
 cp .env.example .env.local   # JWT_SECRET 등 채우기
+
+# 1) 의존성
+pnpm install
 
 # 2) DB (docker postgres:16, 포트 17901)
 docker compose up -d
