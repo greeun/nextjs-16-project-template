@@ -80,4 +80,5 @@ src/
 ## 의존성 규칙
 
 - 인증 시크릿 `JWT_SECRET` 은 비-dev/test 환경에서 32자 이상 필수(미설정 시 부팅 거부).
-- `@withwiz/*` 는 npm 게시 버전 사용(file: dep 아님).
+- `@withwiz/*` 는 npm 게시 **최신** 버전 사용(file: dep 아님). 올릴 때 `pnpm add @withwiz/toolkit@latest @withwiz/ui@latest @withwiz/auth-ui@latest` 후 `pnpm typecheck && pnpm lint && pnpm test` 로 확인.
+- `pnpm install` 은 `.env.local` 생성 뒤에 실행한다 — postinstall(`prisma generate`)이 `DATABASE_URL` 을 요구한다.

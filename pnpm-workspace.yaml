@@ -4,5 +4,3 @@ allowBuilds:
   prisma: true
   sharp: true
   unrs-resolver: true
-minimumReleaseAgeExclude:
-  - '@withwiz/ui@0.2.0'
