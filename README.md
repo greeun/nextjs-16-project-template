@@ -10,14 +10,17 @@ withwiz 패키지(`@withwiz/toolkit` · `@withwiz/ui` · `@withwiz/auth-ui`) 기
 
 ## 템플릿으로 새 프로젝트 시작
 
-이 repo 는 **private GitHub Template Repository** 다. 새 프로젝트는 아래 중 하나로 시작한다.
+이 repo 는 **public GitHub Template Repository** 다. 새 프로젝트는 아래 중 하나로 시작한다.
 
 ```bash
-# 방법 A — gh 로 파일만 가져오고 템플릿 히스토리는 끊는다 (private 이라 degit 은 인증 실패)
+# 방법 A — degit 으로 파일만(히스토리 없이) 가져온다. 인증 불필요
+npx degit greeun/nextjs-16-project-template my-saas && cd my-saas
+
+# 방법 B — gh 로 얕은 clone 후 템플릿 히스토리를 끊는다
 gh repo clone greeun/nextjs-16-project-template my-saas -- --depth=1 \
   && rm -rf my-saas/.git && cd my-saas
 
-# 방법 B — GitHub "Use this template" 로 새 repo 생성 후 clone
+# 방법 C — GitHub "Use this template" 로 새 repo 생성 후 clone
 git clone <새-repo-url> my-saas && cd my-saas
 ```
 
