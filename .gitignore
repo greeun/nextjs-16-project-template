@@ -24,7 +24,7 @@ next-env.d.ts
 # env (실제 값은 절대 커밋 금지 — .env.example 만 추적)
 .env
 .env.local
-.env.dev
+.env.development
 .env.production
 .env.test
 .env*.local
