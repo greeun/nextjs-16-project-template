@@ -6,7 +6,7 @@ dist
 .git
 .env
 .env.local
-.env.dev
+.env.development
 .env.production
 .env.test
 coverage

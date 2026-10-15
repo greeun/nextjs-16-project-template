@@ -31,7 +31,7 @@ git clone <새-repo-url> my-saas && cd my-saas
 #                               └이름     └포트블록(3자리) → 18000/18001/18005/18006/18030, DB my_saas
 ```
 
-스크립트가 하는 일: 이름(`nextjs-16-project-template`)·포트(`179xx`)·DB명(`nextjs_16_project_template`) 치환 + `.env.local` 생성(JWT_SECRET 랜덤) + 템플릿 흔적 제거 + git 히스토리 새로 시작. 이후 워크스페이스 `PORTS.md` 에 새 블록을 등록하고, `pnpm install` 뒤에 `pnpm add @withwiz/toolkit@latest @withwiz/ui@latest @withwiz/auth-ui@latest` 로 withwiz 를 npm 게시 최신 버전으로 올린다.
+스크립트가 하는 일: 이름(`nextjs-16-project-template`)·포트(`179xx`)·DB명(`nextjs_16_project_template`) 치환 + `.env.local` 생성(JWT_SECRET 랜덤) + 템플릿 흔적 제거 + git 히스토리 새로 시작. 이후 워크스페이스 `PORTS.md` 에 새 블록을 등록하고, `pnpm install` 뒤에 `pnpm withwiz:update` 로 withwiz 를 npm 게시 최신 버전으로 올린다(package.json 에 `latest` 로 지정돼 있어 특정 버전에 고정되지 않는다).
 
 ## 빠른 시작
 

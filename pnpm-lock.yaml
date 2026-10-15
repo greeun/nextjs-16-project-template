@@ -15,14 +15,14 @@ importers:
         specifier: ^7.7.0
         version: 7.8.0(prisma@7.8.0(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@5.9.3))(typescript@5.9.3)
       '@withwiz/auth-ui':
-        specifier: ^0.6.1
-        version: 0.6.1(next@16.2.9(@babel/core@7.29.7(supports-color@7.2.0))(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+        specifier: latest
+        version: 0.6.2(next@16.2.9(@babel/core@7.29.7(supports-color@7.2.0))(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@withwiz/toolkit':
-        specifier: ^0.13.0
-        version: 0.13.0(next@16.2.9(@babel/core@7.29.7(supports-color@7.2.0))(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(nodemailer@7.0.13)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+        specifier: latest
+        version: 0.20.0(next@16.2.9(@babel/core@7.29.7(supports-color@7.2.0))(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(nodemailer@7.0.13)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@withwiz/ui':
-        specifier: ^0.3.1
-        version: 0.3.1(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(@withwiz/toolkit@0.13.0(next@16.2.9(@babel/core@7.29.7(supports-color@7.2.0))(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(nodemailer@7.0.13)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(next@16.2.9(@babel/core@7.29.7(supports-color@7.2.0))(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+        specifier: latest
+        version: 0.4.0(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(@withwiz/toolkit@0.20.0(next@16.2.9(@babel/core@7.29.7(supports-color@7.2.0))(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(nodemailer@7.0.13)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(next@16.2.9(@babel/core@7.29.7(supports-color@7.2.0))(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       bcryptjs:
         specifier: ^3.0.2
         version: 3.0.3
@@ -1705,15 +1705,15 @@ packages:
   '@vitest/utils@4.1.9':
     resolution: {integrity: sha512-A51o8ymO5PpqlWNnBP9ZHPXDIpuMtTLlGSjN7la4US+LJzoUMyhwjA5QXlm39JexgwHKW4Xjs8Z2d3dLCXOeuA==}
 
-  '@withwiz/auth-ui@0.6.1':
-    resolution: {integrity: sha512-IIPzZ1vxqKrcrd+/oDjwTYyt6anYTBqLH0o4WwwbTxM63ioYIUHru5LBxuc/7Sn2JWq3PWhH9m01iR1KCFXsLw==}
+  '@withwiz/auth-ui@0.6.2':
+    resolution: {integrity: sha512-raOoLKU+pKBAOyiDe7tGv74gBVVIYzFSxz1KT+zJWSsrHxib1H2+d+fMHl54P3MDsqYrRqmwmiihBmPENlWkbQ==}
     peerDependencies:
       next: '>=15'
       react: '>=18'
       react-dom: '>=18'
 
-  '@withwiz/toolkit@0.13.0':
-    resolution: {integrity: sha512-LYYKUzYle8nthC8NzRpHyoFOhYo8OmWpI2vcJnVY+HyXkIP7LO4Rcixx8j5GjyF3T9hN8YFUALZE6sVshR5l/g==}
+  '@withwiz/toolkit@0.20.0':
+    resolution: {integrity: sha512-LYC7y/0k+4O1bMn8OYGIP7I2L8c6ygot8j5FHY5Q8WD4KfmuEd/szq+PZ0gizbnLs7s82be5hnk0D6oMJvOuBQ==}
     engines: {node: '>=18'}
     peerDependencies:
       argon2: '>=0.31.0'
@@ -1736,8 +1736,8 @@ packages:
       react-dom:
         optional: true
 
-  '@withwiz/ui@0.3.1':
-    resolution: {integrity: sha512-WsGBUm4o5fW8+WjhsiDsa/9EN9S4+BNqsn/9iQwnBz9M1AN6Nm3d5CnqZ6ypVR4Jd/Q7yIhTMv6PYhJBgI9d2Q==}
+  '@withwiz/ui@0.4.0':
+    resolution: {integrity: sha512-o12PeEuLGD0oFQh4P/FXJMuzsLDe/XqTn2WZT1zu4sIV/8FllcvesgA6Y7h+QSriAAz+4KK89qpyNPt44U7IIw==}
     engines: {node: '>=20', pnpm: '>=10'}
     peerDependencies:
       '@withwiz/toolkit': '>=0.8.0'
@@ -5194,14 +5194,14 @@ snapshots:
       convert-source-map: 2.0.0
       tinyrainbow: 3.1.0
 
-  '@withwiz/auth-ui@0.6.1(next@16.2.9(@babel/core@7.29.7(supports-color@7.2.0))(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+  '@withwiz/auth-ui@0.6.2(next@16.2.9(@babel/core@7.29.7(supports-color@7.2.0))(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
     dependencies:
       next: 16.2.9(@babel/core@7.29.7(supports-color@7.2.0))(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       react: 19.2.7
       react-dom: 19.2.7(react@19.2.7)
       zod: 3.25.76
 
-  '@withwiz/toolkit@0.13.0(next@16.2.9(@babel/core@7.29.7(supports-color@7.2.0))(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(nodemailer@7.0.13)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+  '@withwiz/toolkit@0.20.0(next@16.2.9(@babel/core@7.29.7(supports-color@7.2.0))(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(nodemailer@7.0.13)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
     dependencies:
       '@aws-sdk/client-s3': 3.1073.0
       '@upstash/redis': 1.38.0
@@ -5219,7 +5219,7 @@ snapshots:
       react: 19.2.7
       react-dom: 19.2.7(react@19.2.7)
 
-  '@withwiz/ui@0.3.1(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(@withwiz/toolkit@0.13.0(next@16.2.9(@babel/core@7.29.7(supports-color@7.2.0))(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(nodemailer@7.0.13)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(next@16.2.9(@babel/core@7.29.7(supports-color@7.2.0))(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+  '@withwiz/ui@0.4.0(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(@withwiz/toolkit@0.20.0(next@16.2.9(@babel/core@7.29.7(supports-color@7.2.0))(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(nodemailer@7.0.13)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(next@16.2.9(@babel/core@7.29.7(supports-color@7.2.0))(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
     dependencies:
       '@radix-ui/react-select': 2.3.1(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       clsx: 2.1.1
@@ -5227,7 +5227,7 @@ snapshots:
       sonner: 2.0.7(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       tailwind-merge: 3.6.0
     optionalDependencies:
-      '@withwiz/toolkit': 0.13.0(next@16.2.9(@babel/core@7.29.7(supports-color@7.2.0))(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(nodemailer@7.0.13)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@withwiz/toolkit': 0.20.0(next@16.2.9(@babel/core@7.29.7(supports-color@7.2.0))(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(nodemailer@7.0.13)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       next: 16.2.9(@babel/core@7.29.7(supports-color@7.2.0))(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       react: 19.2.7
       react-dom: 19.2.7(react@19.2.7)
